@@ -68,7 +68,7 @@ public class CustomerToast {
                     case MotionEvent.ACTION_UP:
                         break;
                 }
-                return false;
+                return true;
             }
         });
     }
