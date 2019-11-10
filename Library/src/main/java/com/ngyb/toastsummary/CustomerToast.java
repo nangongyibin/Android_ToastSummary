@@ -59,8 +59,8 @@ public class CustomerToast {
                         int moveY = (int) event.getRawY();
                         int disX = moveX - startX;
                         int disY = moveY - startY;
-                        params.x = disX;
-                        params.y = disY;
+                        params.x += disX;
+                        params.y += disY;
                         wm.updateViewLayout(viewToast, params);
                         startY = moveY;
                         startX = moveX;
@@ -68,7 +68,7 @@ public class CustomerToast {
                     case MotionEvent.ACTION_UP:
                         break;
                 }
-                return true;
+                return false;
             }
         });
     }
